@@ -1,0 +1,44 @@
+/* Basic MSN-style inspired colors and layout */
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #d7e9ff; color: #222; }
+.login-screen { height: 100vh; display:flex; align-items:center; justify-content:center; }
+.login-box { background: #f6fbff; border: 2px solid #aac8ff; padding: 22px; width: 320px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.login-box h2 { margin-top:0; }
+.login-box input { width:100%; padding:8px; margin:6px 0 12px; border:1px solid #cfe1ff; border-radius:4px; }
+.login-box .actions { text-align:right; }
+.login-box button { padding:8px 12px; background:#0078d7; color:white; border:none; border-radius:4px; cursor:pointer; }
+.login-box .note { font-size:12px; color:#666; margin-top:8px; }
+
+.chat-screen { display:flex; height:100vh; }
+.sidebar { width:220px; background:#eaf3ff; border-right:2px solid #aac8ff; padding:12px; box-sizing:border-box; }
+.room-buttons { display:flex; gap:6px; margin-bottom:10px; }
+.room-buttons button { flex:1; padding:6px; border-radius:4px; border:1px solid #b6d6ff; background:#f8fbff; cursor:pointer; }
+.room-buttons button.active { background:#cfe6ff; border-color:#7fbfff; font-weight:600; }
+.sidebar h3 { margin:8px 0 6px; font-size:14px; color:#333; }
+.user-list { list-style:none; padding:0; margin:0; max-height:70vh; overflow:auto; }
+.user-list li { padding:8px; border-bottom:1px solid #e2f0ff; cursor:pointer; display:flex; align-items:center; gap:8px; }
+.user-list li:hover { background:#f3fbff; }
+.avatar { width:34px; height:34px; border-radius:6px; background:#cfe6ff; display:inline-flex; align-items:center; justify-content:center; font-weight:700; color:#035; }
+.meta { font-size:12px; color:#555; }
+
+.chat-area { flex:1; display:flex; flex-direction:column; }
+.header { padding:12px; border-bottom:1px solid #e6f0ff; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(#f8fbff,#eaf6ff); }
+.messages { flex:1; padding:12px; overflow:auto; background: repeating-linear-gradient( to bottom, #fff, #fff 40px, #f7fbff 40px, #f7fbff 80px ); }
+.msg { margin:8px 0; max-width:70%; padding:8px 10px; border-radius:8px; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+.msg.me { background:#d9f0ff; margin-left:auto; text-align:right; }
+.msg.other { background:#fff; margin-right:auto; }
+.msg .meta { font-size:11px; color:#666; margin-bottom:4px; }
+
+.input-area { display:flex; gap:8px; padding:12px; border-top:1px solid #e6f0ff; background:#f8fbff; }
+.input-area input[type="text"], .input-area input[type="file"] { flex:1; padding:8px; border-radius:4px; border:1px solid #cfe1ff; }
+.input-area button { padding:8px 12px; background:#0078d7; color:white; border:none; border-radius:4px; cursor:pointer; }
+
+/* Private chat window */
+.private-chat { position:fixed; right:20px; bottom:20px; width:320px; background:#fff; border:2px solid #aac8ff; border-radius:6px; box-shadow:0 8px 24px rgba(0,0,0,0.12); overflow:hidden; display:flex; flex-direction:column; z-index:40; }
+.private-chat .pc-header { background:#eaf3ff; padding:8px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dbeeff; }
+.private-chat .pc-messages { padding:10px; min-height:140px; max-height:240px; overflow:auto; background:#fafcff; }
+.private-chat .pc-input { padding:8px; display:flex; gap:6px; border-top:1px solid #eef6ff; }
+.private-chat input[type="text"] { flex:1; padding:6px; border:1px solid #cfe1ff; border-radius:4px; }
+.private-chat input[type="file"] { display:block; }
+.close-btn { background:#ff6b6b; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; }
+
+.system { font-size:12px; color:#666; text-align:center; margin:8px 0; }

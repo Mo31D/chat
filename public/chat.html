@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Retro Chat Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-screen">
+  <div class="sidebar">
+    <div class="room-buttons">
+      <button id="btnChat1" class="active" data-room="chat1">Chat 1</button>
+      <button id="btnChat2" data-room="chat2">Chat 2</button>
+      <button id="btnChat3" data-room="chat3">Chat 3</button>
+    </div>
+    <h3>Online Users</h3>
+    <ul id="userList" class="user-list"></ul>
+  </div>
+
+  <div class="chat-area">
+    <div class="header">
+      <h2 id="roomTitle">Chat 1 (Public)</h2>
+      <div id="youInfo" class="you-info"></div>
+    </div>
+
+    <div id="messages" class="messages"></div>
+
+    <div class="input-area">
+      <input id="msgInput" placeholder="Type a public message...">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Private chat template container -->
+  <div id="privateContainer"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

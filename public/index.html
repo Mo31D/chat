@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enter Chat — MSN Style</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-screen">
+  <div class="login-box">
+    <h2>Welcome to Retro Chat</h2>
+    <label>Nickname (optional)</label>
+    <input id="name" placeholder="e.g. Ahmed">
+    <label>Age (optional)</label>
+    <input id="age" type="number" min="1" placeholder="e.g. 25">
+    <label>Country (optional)</label>
+    <input id="country" placeholder="e.g. Egypt">
+    <div class="checkbox-row">
+      <input id="guest" type="checkbox" checked> <label for="guest">Enter as Guest if name empty</label>
+    </div>
+    <div class="actions">
+      <button id="enterBtn">Enter Chat</button>
+    </div>
+    <p class="note">No registration — just choose a name (or join as Guest).</p>
+  </div>
+
+  <script>
+    document.getElementById('enterBtn').addEventListener('click', () => {
+      const name = document.getElementById('name').value.trim();
+      const age = document.getElementById('age').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const params = new URLSearchParams();
+      if (name) params.set('name', name);
+      if (age) params.set('age', age);
+      if (country) params.set('country', country);
+      // default open in chat1
+      params.set('room', 'chat1');
+      window.location.href = 'chat.html?' + params.toString();
+    });
+  </script>
+</body>
+</html>
